@@ -1,0 +1,65 @@
+:root{
+    --cor-de-fundo: #000000;
+    --cor-de-fundo-selecionado: #262626;
+    --cor-da-letra-principal: #ffffff;
+
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    border: 0%;
+    text-decoration: none;
+
+}
+
+body{
+
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-da-letra-principal);
+    font-size: 2rem;
+    padding-top: 2%;
+    
+}
+
+.principal{
+
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6rem;
+    text-align: center;
+
+}
+
+.icones{
+
+    text-align: center;
+    padding-top: 7%;
+}
+
+.container{
+
+    height: auto;
+
+}
+
+.container__botao__cadastro:hover{
+
+    background-color: var(--cor-de-fundo-selecionado);
+
+    
+}
+
+
+.container__botao__exclui:hover{
+
+    background-color: var(--cor-de-fundo-selecionado);
+
+}
+
+
+.container__botao__consulta:hover{
+
+    background-color: var(--cor-de-fundo-selecionado);
+    
+}
+
