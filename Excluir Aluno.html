@@ -14,13 +14,17 @@
     .box{
         color: white;
         position: absolute;
-        top: 50%;
+        top: 600px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 15px;
-        width: 20%;
+        width: 900px;
+    }
+    fieldset{
+        border: 3px solid dodgerblue;
+        border-radius: 15px;
     }
     legend{
         border: 1px solid dodgerblue;
@@ -85,11 +89,16 @@
         <a class="container__botao__pequeno" href="/Excluir.html">
             <img src="Icones/Excluir 150X150.png">
         </a>
+        <script>
+            function confirmarExclusao() {
+                return confirm("Tem certeza de que deseja excluir este aluno?");
+            }
+        </script>
     <li>
     </ul>   
-    <h1 class="formulario">Excluir Aluno</h1>
+    <h1 class="icones_pequenos">Excluir Aluno</h1>
     <div class="box">
-        <form action="">
+        <form action="excluir_aluno.php" method="post" onsubmit="return confirmarExclusao()">
             <fieldset>
                 <legend><b>Exclusão de Aluno</b></legend>
                 <br><br>

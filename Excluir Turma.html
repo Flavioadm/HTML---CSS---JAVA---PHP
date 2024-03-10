@@ -14,13 +14,13 @@
     .box{
         color: white;
         position: absolute;
-        top: 50%;
+        top: 600px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 15px;
-        width: 20%;
+        width: 40%;
     }
     legend{
         border: 1px solid dodgerblue;
@@ -86,10 +86,16 @@
             <img src="Icones/Excluir 150X150.png">
         </a>
     <li>
-    </ul>   
-    <h1 class="formulario">Excluir Turma</h1>
+    <script>
+        function confirmarExclusao() {
+            return confirm("Tem certeza de que deseja excluir esta turma?");
+        }
+    </script>
+</ul>   
+    <h1 class="icones_pequenos">Excluir Turma</h1>
     <div class="box">
-        <form action="">
+        <form  action="excluir_turma.php" method="post" onsubmit="return confirmarExclusao()">
+            <fieldset>
             <fieldset>
                 <legend><b>Exclusão de truma</b></legend>
                 <br><br>

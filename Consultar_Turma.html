@@ -14,13 +14,13 @@
     .box{
         color: white;
         position: absolute;
-        top: 50%;
+        top: 600px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 15px;
-        width: 20%;
+        width: 40%;
     }
     legend{
         border: 1px solid dodgerblue;
@@ -73,32 +73,32 @@
 <body>
     <ul>
         <li class="icones_pequenos">
-        <a class="container__botao__pequeno" href="/index.html">
-            <img src="Icones/Home 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Cadastrar.html">
-            <img src="Icones/Cadastrar 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Consultar.html">
-            <img src="Icones/Consultar 150X150.png">
-        </a>
-        <a class="container__botao__pequeno" href="/Excluir.html">
-            <img src="Icones/Excluir 150X150.png">
-        </a>
-    <li>
+            <a class="container__botao__pequeno" href="/index.html">
+                <img src="Icones/Home 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Cadastrar.html">
+                <img src="Icones/Cadastrar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Consultar.html">
+                <img src="Icones/Consultar 150X150.png">
+            </a>
+            <a class="container__botao__pequeno" href="/Excluir.html">
+                <img src="Icones/Excluir 150X150.png">
+            </a>
+        </li>
     </ul>   
-    <h1 class="formulario">Consultar Turma</h1>
+    <h1 class="icones_pequenos">Consultar Turma</h1>
     <div class="box">
-        <form action="">
+        <form action="consultar_turma.php" method="post">
             <fieldset>
-                <legend><b>Consulta de truma</b></legend>
+                <legend><b>Consulta de turma</b></legend>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome da turma</label>
+                    <input type="text" name="turma" id="turma" class="inputUser" required>
+                    <label for="turma" class="labelInput">Nome da turma</label>
                 </div>
                 <br>
-                <input type="submit" name="submit" id="submit">
+                <input type="submit" name="submit" id="submit" value="Consultar">
             </fieldset>
         </form>
     </div>

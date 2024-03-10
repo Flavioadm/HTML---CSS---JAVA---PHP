@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=">
     <link rel = "stylesheet" href="styles.css">
     <title class="icones_pequenos">Cadastrar Aluno</title>
 </head>
@@ -14,11 +14,11 @@
     .box{
         color: white;
         position: fixed;
-        top: 600px;
+        top: 490px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
-        padding: 1.5rem;
+        padding: 15px;
         border-radius: 15px;
         width: 900px;
     }
@@ -31,7 +31,7 @@
         padding: 10px;
         text-align: center;
         background-color: dodgerblue;
-        border-radius: 15px;
+        border-radius: 16px;
     }
     .inputBox{
         position: relative;
@@ -42,7 +42,7 @@
         border-bottom: 1px solid white;
         outline: none;
         color: white;
-        font-size: 15px;
+        font-size: 32px;
         width: 100%;
         letter-spacing: 2px;
     }
@@ -55,7 +55,7 @@
     }
     .inputUser:focus ~ .labelInput,
     .inputUser:valid ~ .labelInput{
-        top: -20px;
+        top: -30px;
         font-size: 12px;
         color: dodgerblue;
     }
@@ -100,27 +100,36 @@
         <h1 class="principal">Cadastrar Aluno</h1>
         <br>
     <div class="box">
-        <form action="">
+        <form action="Cadastra_aluno.php" method="post">
             <fieldset>
                 <legend><b>Cadastro de Aluno</b></legend>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome completo</label>
+                    <input type="text" name="nome_aluno" id="nome_aluno" class="inputUser" required>
+                    <label for="nome_aluno" class="labelInput">Nome completo</label>
                 </div>
                 <br>
                 <div class="inputBox">
-                    <input type="text" name="turma" id="turma" class="inputUser" required>
-                    <label for="email" class="labelInput">Turma</label>
+                    <form action="processa_selecao.php" method="post">
+                        <label  for="cadastro_turma">Turma:</label>
+                        <select name="cadastro_turma" id="cadastro_turma" required>
+                            <option value="">Selecione...</option>
+                            <?php
+                            foreach ($resultados as $turma) {
+                                echo "<option value='{$cadastro_turma['id']}'>{$cadastro_turma['serie']} - {$cadastro_turma['turma']} ({cadastro_turma['turno']})</option>";
+                            }
+                            ?>
+                        </select>
+                    </form>
                 </div>
                 <br>
-                <label for="data_nascimento"><b>Data de Nascimento:</b></label>
+                <label class="inputBox" for="data_nascimento"><b>Data de Nascimento:</b></label>
                 <input type="date" name="data_nascimento" id="data_nascimento" required>
                 <br><br>
-                <input type="submit" name="submit" id="submit">
+                <input class="icones" type="submit" name="submit" id="submit">
+                <br>
             </fieldset>
         </form>
-    </div>
-    
+    </div> 
 </body>
 </html>
