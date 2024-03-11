@@ -10,9 +10,8 @@
     padding: 0%;
     border: 0%;
     text-decoration: none;
-    
- 
-}
+    position: relative;
+ }
 
 body{
 
@@ -57,10 +56,10 @@ body{
 }
 
 .footer{
-    background-color: var(--cor-de-fundo-selecionado);
+    background-color: #282828;
     color: var(--cor-da-letra-principal);
     text-align: center;
-    font-size: 1rem;
+    font-size: 1em;
     position: fixed;
     bottom: 0;
     width: 100%;
