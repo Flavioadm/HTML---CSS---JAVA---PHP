@@ -2,7 +2,6 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE = edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href="styles.css">
     <title class="icones_pequenos">Consultar Turma</title>
@@ -15,20 +14,26 @@
     .box{
         color: white;
         position: absolute;
-        top: 600px;
+        top: 550px;
         left: 50%;
         transform: translate(-50%,-50%);
         background-color: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 15px;
-        width: 60%;
+        width: 1000px;
     }
+
+    fieldset{
+        border: 3px solid dodgerblue;
+        border-radius: 15px;
+    }
+
     legend{
         border: 1px solid dodgerblue;
         padding: 10px;
         text-align: center;
         background-color: dodgerblue;
-        border-radius: 8px;
+        border-radius: 16px;
     }
     .inputBox{
         position: relative;
@@ -39,7 +44,7 @@
         border-bottom: 1px solid white;
         outline: none;
         color: white;
-        font-size: 15px;
+        font-size: 32px;
         width: 100%;
         letter-spacing: 2px;
     }
@@ -52,8 +57,8 @@
     }
     .inputUser:focus ~ .labelInput,
     .inputUser:valid ~ .labelInput{
-        top: -20px;
-        font-size: 12px;
+        top: -30px;
+        font-size: 16px;
         color: dodgerblue;
     }
     #submit{
@@ -87,8 +92,8 @@
             <img src="Icones/Excluir 150X150.png">
         </a>
     <li>
-    </ul>   
-    <h1 class="icones_pequenos">Consultar Aluno</h1>
+        </ul>   
+            <h1 class="icones_pequenos">Consultar Aluno</h1>
     <div class="box">
         <form action="consulta_aluno.php" method="post">
             <fieldset>
